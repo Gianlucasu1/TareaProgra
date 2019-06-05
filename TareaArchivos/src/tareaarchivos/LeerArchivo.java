@@ -16,7 +16,7 @@ public class LeerArchivo {
     public void lee(){
     
         try {
-            FileReader miArch=new FileReader("/Users/gianlucasorem/Desktop/Hola.txt");
+            FileReader miArch=new FileReader("Hola.txt");
             int c=miArch.read();
             
             

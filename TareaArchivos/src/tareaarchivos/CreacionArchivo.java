@@ -19,20 +19,35 @@ public class CreacionArchivo {
     
     public void LlenarArch() {
         
-     
-         for(int i=0; i<50; i++){
-        
-            System.out.println("Escribe una palabra");
+        System.out.println("Escribe una palabra");
             String entradaTeclado = "";
 
             Scanner entradaEscaner = new Scanner (System.in);
             entradaTeclado = entradaEscaner.nextLine ();
+             try {
+                 FileWriter escritura=new FileWriter("Hola.txt");
+                 escritura.write(entradaTeclado);
+             
+               escritura.close();
+             } catch (IOException ex) {
+                 Logger.getLogger(CreacionArchivo.class.getName()).log(Level.SEVERE, null, ex);
+             }
+     
+         for(int i=0; i<50; i++){
+        
+            System.out.println("Escribe una palabra");
+            String entradaTeclado1 = "";
+
+            Scanner entradaEscaner1 = new Scanner (System.in);
+            entradaTeclado1 = entradaEscaner1.nextLine ();
+             
 
           try {
-              FileWriter escritura=new FileWriter("/Users/gianlucasorem/Desktop/Hola.txt");
+              FileWriter escritura1=new FileWriter("Hola.txt",true);
               
-             escritura.write(entradaTeclado);
-             escritura.close();
+             escritura1.write(entradaTeclado1);
+             
+             escritura1.close();
              
           } catch (IOException ex) {
               Logger.getLogger(CreacionArchivo.class.getName()).log(Level.SEVERE, null, ex);
