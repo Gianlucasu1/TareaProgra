@@ -20,23 +20,17 @@ public class TareaArchivos {
         // TODO code application logic here
         
         
+        CreacionArchivo escribiendoArch=new CreacionArchivo();
+        escribiendoArch.LlenarArch();
+
+        
+        
         LeerArchivo accediendo=new LeerArchivo();
         accediendo.lee();
         
-        /*for(int i=0; i<50; i++){
         
-            System.out.println("Escribe una palabra");
-            String entradaTeclado = "";
-
-            Scanner entradaEscaner = new Scanner (System.in);
-            entradaTeclado = entradaEscaner.nextLine ();
-
-             CreacionArchivo arch=new CreacionArchivo(entradaTeclado);
-             arch.LlenarArch();
-        }
-       */
-        
-        
+       
+       
         
        
     

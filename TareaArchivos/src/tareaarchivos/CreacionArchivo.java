@@ -6,6 +6,8 @@
 package tareaarchivos;
 import java.io.*;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,17 +15,31 @@ import java.util.Scanner;
  */
 public class CreacionArchivo {
     
-    private final String palabra;
     
-    
-    public CreacionArchivo(String palabra) {
-        this.palabra=palabra;
-    }
     
     public void LlenarArch() {
         
-      System.out.println ("Entrada recibida por teclado es: \"" + palabra +"\"");
+     
+         for(int i=0; i<50; i++){
         
+            System.out.println("Escribe una palabra");
+            String entradaTeclado = "";
+
+            Scanner entradaEscaner = new Scanner (System.in);
+            entradaTeclado = entradaEscaner.nextLine ();
+
+          try {
+              FileWriter escritura=new FileWriter("/Users/gianlucasorem/Desktop/Hola.txt");
+              
+             escritura.write(entradaTeclado);
+             escritura.close();
+             
+          } catch (IOException ex) {
+              Logger.getLogger(CreacionArchivo.class.getName()).log(Level.SEVERE, null, ex);
+          }
+             
+        }
+       
     }
     
 }
