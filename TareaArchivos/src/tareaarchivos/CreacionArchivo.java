@@ -33,7 +33,7 @@ public class CreacionArchivo {
                  Logger.getLogger(CreacionArchivo.class.getName()).log(Level.SEVERE, null, ex);
              }
      
-         for(int i=0; i<50; i++){
+         for(int i=0; i<48; i++){
         
             System.out.println("Escribe una palabra");
             String entradaTeclado1 = "";

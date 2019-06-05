@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareaarchivos;
-import java.io.IOException;
-import java.util.Scanner;
+package archivobinnum;
 
+import java.io.IOException;
 
 /**
  *
  * @author gianlucasorem
  */
-public class TareaArchivos {
+public class ArchivoBinNum {
 
     /**
      * @param args the command line arguments
@@ -20,23 +19,11 @@ public class TareaArchivos {
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         
+        EscribirArchivoBin miArch1= new EscribirArchivoBin();
+        miArch1.crearArchBin();
         
-        CreacionArchivo escribiendoArch=new CreacionArchivo();
-        escribiendoArch.LlenarArch();
-
-        
-        
-        LeerArchivo accediendo=new LeerArchivo();
-        accediendo.lee();
-        
-        
-       
-        
-        
-       
-       
-        
-       
+        LeerArchivoBin miArch= new LeerArchivoBin();
+        miArch.lee();
+    }
     
 }
-    }
